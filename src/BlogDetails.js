@@ -7,7 +7,7 @@ const BlogDetails = () => {
     const {data:blog,isPending,error} = useFetch('http://localhost:8000/blogs/' + id);
     const history = useHistory();
     const handleClicks = ()=>{
-        fetch('http://localhost:8000/blogs/'+blog.id,{
+        fetch('http://localhost:8000/blogs/'+blog.id,{ //use variable for urls
             method :'DELETE'
         })
         .then(()=>{
